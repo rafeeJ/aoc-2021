@@ -21,7 +21,7 @@ for coords in array_p_one:
         #print('max: {}, min: {}'.format(max_c, min_c))
         for i in range(min_c, max_c+1):
             #print('marking {},{}'.format(coords[0][0], i))
-            heat_map[i][coords[0][0]] += 1
+            heat_map[coords[0][0]][i] += 1
     if coords[0][1] == coords[1][1]:
         # Y's are the same!
         c = [coords[0][0], coords[1][0]]
@@ -30,7 +30,7 @@ for coords in array_p_one:
         #print('max: {}, min: {}'.format(max_c, min_c))
         for i in range(min_c, max_c+1):
             #print('marking {},{}'.format(i, coords[0][1]))
-            heat_map[coords[0][1]][i] += 1
+            heat_map[i][coords[0][1]] += 1
 
 def sum_heatmap(heat_map):
     c = 0 
